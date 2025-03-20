@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Payment</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>UPI Payment Gateway</h1>
+    <label>Enter Amount (Max ₹1000):</label>
+    <input type="number" id="amount" min="1" max="1000" value="100">
+    <br><br>
+    <button onclick="generateQR()">Pay Now</button>
+
+    <script>
+        function generateQR() {
+            let amount = document.getElementById("amount").value;
+            if (amount < 1 || amount > 1000) {
+                alert("Amount must be between ₹1 and ₹1000");
+                return;
+            }
+            window.location.href = `/generate_qr?amount=${amount}`;
+        }
+    </script>
+</body>
+</html>
