@@ -1,0 +1,13 @@
+<button onclick="generateQR()">Pay Now</button>
+<img id="qrCode" src="" />
+
+<script>
+  function generateQR() {
+    let amount = prompt("Enter amount (Max ₹1000):");
+    if(amount > 1000) { alert("Limit is ₹1000"); return; }
+    
+    document.getElementById("qrCode").src = "https://upi-payment.vercel.app/generate_qr?amount=" + amount;
+    
+    setTimeout(() => { window.history.back(); }, 5000); // Auto redirect
+  }
+</script>
