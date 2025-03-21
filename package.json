@@ -1,24 +1,26 @@
 {
-  "name": "upi-payment",
+  "name": "sky-gateway",
   "version": "1.0.0",
-  "description": "A simple UPI QR code generator",
+  "description": "A simple UPI payment gateway that generates QR codes for transactions.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
-  "dependencies": {
-    "express": "^4.18.2",
-    "qrcode": "^1.5.0"
-  }
-}
-{
-  "name": "my-project",
-  "version": "1.0.0",
   "dependencies": {
     "@supabase/supabase-js": "^2.5.0",
-    "jimp": "^0.16.1"
+    "jimp": "^0.16.1",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "qrcode": "^1.5.0",
+    "dotenv": "^16.0.3"
   },
-  "scripts": {
-    "start": "node index.js"
-  }
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "author": "Sunilkumar",
+  "license": "MIT"
 }
