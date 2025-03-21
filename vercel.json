@@ -3,5 +3,3 @@
     { "source": "/", "destination": "/index.html" }
   ]
 }
-SUPABASE_URL=https://lacvyydcoapkdhzanogr.supabase.co/
-SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxhY3Z5eWRjb2Fwa2RoemFub2dyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI1NDMwMTksImV4cCI6MjA1ODExOTAxOX0.ebfALF9yM_Ixvq421A8liMMzGQP6FaOSRKmoe1KDrLE
