@@ -3,48 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SKY Gateway</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-        }
-        #loading {
-            display: none;
-            margin: 20px auto;
-            width: 50px;
-            height: 50px;
-            border: 5px solid #ccc;
-            border-top-color: #007bff;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    </style>
+    <title>SKY Gateway - UPI Payment</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>UPI Payment QR Code Generator</h1>
-    <button onclick="generateQR()">Generate QR Code</button>
-    
-    <div id="loading"></div>
-    <img id="qrImage" src="" alt="QR Code" style="display:none; margin-top: 20px; width: 200px;">
 
-    <script>
-        function generateQR() {
-            document.getElementById("loading").style.display = "block";
-            document.getElementById("qrImage").style.display = "none";
+    <h1>SKY Gateway - UPI Payment</h1>
 
-            setTimeout(() => {
-                // Simulating API Call
-                document.getElementById("loading").style.display = "none";
-                document.getElementById("qrImage").src = "https://via.placeholder.com/200"; // Replace with actual QR Code URL
-                document.getElementById("qrImage").style.display = "block";
-            }, 3000); // Simulating a 3-sec API response delay
-        }
-    </script>
+    <div>
+        <label for="amount">Enter Amount (₹):</label>
+        <input type="number" id="amount" min="1" max="1000" required>
+        <button id="generateQRBtn">Pay Now</button>
+    </div>
+
+    <div id="qrContainer">
+        <h3>Scan to Pay</h3>
+        <img id="qrCode" src="" alt="QR Code">
+    </div>
+
+    <div>
+        <h3>Verify Your Payment</h3>
+        <input type="text" id="referenceInput" placeholder="Enter Reference Number">
+        <button id="verifyPaymentBtn">Verify Payment</button>
+    </div>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
