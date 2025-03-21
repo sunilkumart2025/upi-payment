@@ -11,3 +11,14 @@
     "qrcode": "^1.5.0"
   }
 }
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.5.0",
+    "jimp": "^0.16.1"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
