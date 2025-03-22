@@ -12,7 +12,7 @@ module.exports = async (req, res) => {
 
         const upiId = 'yourupiid@upi';  // Replace with your UPI ID
         const transactionId = `TXN${Date.now()}`;
-        const upiUrl = `upi://pay?pa=${upiId}&pn=SKY%20Gateway&am=${100}&cu=INR&tn=${transactionId}`;
+        const upiUrl = `upi://pay?pa=${upiId}&pn=SKY%20Gateway&am=${amount}&cu=INR&tn=${transactionId}`;
 
         // Generate the base QR code
         const qrCodeBuffer = await QRCode.toBuffer(upiUrl, { width: 300 });
